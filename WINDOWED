@@ -1,4 +1,7 @@
---12/02/25
+print("Loading WindowedHUB by OLLY.EXE")
+
+--13/02/25
+--UPDATED ON THAT DATE
 
 -- BOOTING LIBARY
 
@@ -43,7 +46,7 @@ local Window = Rayfield:CreateWindow({
  })
  --shield-plus
 
-
+ print("Loading WindowedHUB by OLLY.EXE")
 
 -- TABS 1
 local Tab = Window:CreateTab("Home", "layout-grid")
@@ -75,7 +78,7 @@ local Button = Tab:CreateButton({
  local Divider = Tab:CreateDivider()
  local Paragraph = Tab:CreateParagraph({Title = "WARNING", Content = "Warning Doing So Will Make You Have To Re-Execute OLLYLT2HUB"})
 
-
+ print("Loading WindowedHUB by OLLY.EXE")
 -- TABS 1
 local Tab = Window:CreateTab("Self", "layout-grid")
 
@@ -113,7 +116,7 @@ local Toggle = Tab:CreateToggle({
 
  local Paragraph = Tab:CreateParagraph({Title = "Discord", Content = "Warning Doing So Will Make You Have To Re-Execute OLLYLT2HUB"})
 
-
+ print("Loading WindowedHUB by OLLY.EXE")
 
  -- TABS
  local Tab = Window:CreateTab("Arsenal", "swords")
@@ -125,14 +128,7 @@ local Toggle = Tab:CreateToggle({
     -- The function that takes place when the button is pressed
     end,
  })
-
- Rayfield:Notify({
-    Title = "Made by Olly.exe on discord",
-    Content = "Notification Content",
-    Duration = 6.5,
-    Image = "leaf",
- })
- 
+ print("Loading WindowedHUB by OLLY.EXE")
   -- TABS
   local Tab = Window:CreateTab("Greenville", "car")
 
@@ -144,15 +140,25 @@ local Toggle = Tab:CreateToggle({
      end,
   })
   local Paragraph = Tab:CreateParagraph({Title = "Not Working Right Now Try Again Soon", Content = "Check for updates here: https://discord.gg/qHjwaAmSMA"})
-
+  print("Loading WindowedHUB by OLLY.EXE")
 
   Rayfield:Notify({
      Title = "Made by Olly.exe on discord",
-     Content = "Notification Content",
+     Content = "https://discord.gg/qHjwaAmSMA",
      Duration = 6.5,
-     Image = "leaf",
+     Image = "layout-grid",
   })
-  
+   -- TABS 2
+ local Tab = Window:CreateTab("MURDER MYSTERY 2", "cctv")
+
+ local Button = Tab:CreateButton({
+    Name = "MURDER MYSTERY 2",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/TitaniumScr1pts/new1/refs/heads/main/script", true))()
+    -- The function that takes place when the button is pressed
+    end,
+ })
+ print("Loading WindowedHUB by OLLY.EXE")
  -- TABS 2
  local Tab = Window:CreateTab("Starving Artists", "brush")
 
@@ -166,9 +172,9 @@ local Toggle = Tab:CreateToggle({
 
  Rayfield:Notify({
     Title = "Join the discord",
-    Content = "Notification Content",
+    Content = "https://discord.gg/qHjwaAmSMA",
     Duration = 6.5,
-    Image = "",
+    Image = "layout-grid",
  })
 
 
@@ -184,4 +190,55 @@ local Toggle = Tab:CreateToggle({
  })
 
 
- loadstring(game:HttpGet("https://raw.githubusercontent.com/OllyHub/WINDOWEDHUBV1.2/refs/heads/main/obfuscated_WindowedHUBV1.2.txt"))()
+
+ -- TABS 2
+ local Tab = Window:CreateTab("Universal Car Tuning", "car-front")
+
+ local Button = Tab:CreateButton({
+    Name = "Universal Car Tuning",
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/Documantation12/Universal-Vehicle-Script/main/Main.lua'))()
+    -- The function that takes place when the button is pressed
+    end,
+ })
+
+
+ --end
+
+print("Loaded Windowed HUB")
+-- loadstring(game:HttpGet("https://raw.githubusercontent.com/OllyHub/LT2HUB/refs/heads/main/WINDOWED"))()
+
+
+
+wait(10)
+
+
+Rayfield:Notify({
+    Title = "Welcome To WindowedHub",
+    Content = "Windowed Hub was made 11/02/25 by olly.exe",
+    Duration = 20,
+    Image = "layout-grid",
+ })
+ 
+ wait(90)
+
+ Rayfield:Notify({
+    Title = "Did you know we have a discord?",
+    Content = "https://discord.gg/qHjwaAmSMA",
+    Duration = 10,
+    Image = "layout-grid",
+ })
+
+
+ wait(100)
+
+ Rayfield:Notify({
+    Title = "Having fun using the script then join our discord for updates!",
+    Content = "https://discord.gg/qHjwaAmSMA",
+    Duration = 10,
+    Image = "layout-grid",
+ })
+
+
+
+ --loadstring(game:HttpGet('https://raw.githubusercontent.com/Documantation12/Universal-Vehicle-Script/main/Main.lua'))()
