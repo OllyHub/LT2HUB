@@ -1,0 +1,187 @@
+--12/02/25
+
+-- BOOTING LIBARY
+
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))() 
+
+print("Loading WindowedHUB by OLLY.EXE")
+
+-- WINDOWS
+
+local Window = Rayfield:CreateWindow({
+    Name = "WindowedHUB",
+    Icon = "layout-grid", -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
+    LoadingTitle = "WindowedHUB",
+    LoadingSubtitle = "BY OLLY",
+    Theme = "Default", -- Check https://docs.sirius.menu/rayfield/configuration/themes
+ 
+    DisableRayfieldPrompts = false,
+    DisableBuildWarnings = false, -- Prevents Rayfield from warning when the script has a version mismatch with the interface
+ 
+    ConfigurationSaving = {
+       Enabled = true,
+       FolderName = nil, -- Create a custom folder for your hub/game
+       FileName = "Big Hub"
+    },
+ 
+    Discord = {
+       Enabled = true, -- Prompt the user to join your Discord server if their executor supports it
+       Invite = "qHjwaAmSMA", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ ABCD would be ABCD
+       RememberJoins = false -- Set this to false to make them join the discord every time they load it up
+    },
+ 
+    KeySystem = true, -- Set this to true to use our key system
+    KeySettings = {
+       Title = "WindowedHUB",
+       Subtitle = "WindowedHUB Keys",
+       Note = "Key is in the discord", -- Use this to tell the user how to get a key
+       FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+       SaveKey = false, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+       GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+       Key = {"Key1"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+    }
+ })
+ --shield-plus
+
+
+
+-- TABS 1
+local Tab = Window:CreateTab("Home", "layout-grid")
+local Divider = Tab:CreateDivider()
+local Label = Tab:CreateLabel("Credits - Owner of the HUB - Olly.exe, Owner of Arsenal Script (UNKNOWN) - Weed Client, - Remote Spy", folder, Color3.fromRGB(255, 255, 255), false) -- Title, Icon, Color, IgnoreTheme
+local Divider = Tab:CreateDivider()
+local Paragraph = Tab:CreateParagraph({Title = "Discord", Content = "https://discord.gg/qHjwaAmSMA"})
+ -- TABS 1
+local Tab = Window:CreateTab("Help", "badge-help")
+
+local Label = Tab:CreateLabel("Need help?", folder, Color3.fromRGB(255, 255, 255), false) -- Title, Icon, Color, IgnoreTheme
+local Divider = Tab:CreateDivider()
+local Paragraph = Tab:CreateParagraph({Title = "Q1:", Content = "Why does the button say call back function?"})
+    local Divider = Tab:CreateDivider()
+    local Paragraph = Tab:CreateParagraph({Title = "A1:", Content = "This is because your in the incorrect game check the discord to see the supported games for the supported scripts"})
+local Divider = Tab:CreateDivider()
+local Paragraph = Tab:CreateParagraph({Title = "Q2:", Content = "Why does the script not load at all?"})
+local Divider = Tab:CreateDivider()
+local Paragraph = Tab:CreateParagraph({Title = "A2:", Content = "This is because your executor may not support the script"})
+local Divider = Tab:CreateDivider()
+local Paragraph = Tab:CreateParagraph({Title = "Discord", Content = "https://discord.gg/qHjwaAmSMA"})
+local Divider = Tab:CreateDivider()
+local Button = Tab:CreateButton({
+    Name = "Make WindowedHUB Disappear",
+    Callback = function()
+        Rayfield:Destroy() -- The function that takes place when the button is pressed
+    end,
+ })
+ local Divider = Tab:CreateDivider()
+ local Paragraph = Tab:CreateParagraph({Title = "WARNING", Content = "Warning Doing So Will Make You Have To Re-Execute OLLYLT2HUB"})
+
+
+-- TABS 1
+local Tab = Window:CreateTab("Self", "layout-grid")
+
+local Toggle = Tab:CreateToggle({
+    Name = "Infinite Jump",
+    CurrentValue = false,
+    Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(InfiniteJumpEnabled)
+        local InfiniteJumpEnabled = true
+        local InfiniteJumpEnabled = false
+        game:GetService("UserInputService").JumpRequest:connect(function()
+            if InfiniteJumpEnabled then
+                game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
+    -- The function that takes place when the toggle is pressed
+    -- The variable (Value) is a boolean on whether the toggle is true or false
+            end
+        end)
+    end,
+ })
+
+ local Slider = Tab:CreateSlider({
+    Name = "Walkspeed",
+    Range = {16, 250},
+    Increment = 10,
+    Suffix = "Walkspeed",
+    CurrentValue = 10,
+    Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(v)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
+    -- The function that takes place when the slider changes
+    -- The variable (Value) is a number which correlates to the value the slider is currently at
+    end,
+ })
+
+
+ local Paragraph = Tab:CreateParagraph({Title = "Discord", Content = "Warning Doing So Will Make You Have To Re-Execute OLLYLT2HUB"})
+
+
+
+ -- TABS
+ local Tab = Window:CreateTab("Arsenal", "swords")
+
+ local Button = Tab:CreateButton({
+    Name = "Weed Client",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ex55/weed-client/refs/heads/main/main.lua"))()
+    -- The function that takes place when the button is pressed
+    end,
+ })
+
+ Rayfield:Notify({
+    Title = "Made by Olly.exe on discord",
+    Content = "Notification Content",
+    Duration = 6.5,
+    Image = "leaf",
+ })
+ 
+  -- TABS
+  local Tab = Window:CreateTab("Greenville", "car")
+
+  local Button = Tab:CreateButton({
+     Name = "Green Ville AutoFarm",
+     Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Marco8643/test/main/green"))()
+     -- The function that takes place when the button is pressed
+     end,
+  })
+  local Paragraph = Tab:CreateParagraph({Title = "Not Working Right Now Try Again Soon", Content = "Check for updates here: https://discord.gg/qHjwaAmSMA"})
+
+
+  Rayfield:Notify({
+     Title = "Made by Olly.exe on discord",
+     Content = "Notification Content",
+     Duration = 6.5,
+     Image = "leaf",
+  })
+  
+ -- TABS 2
+ local Tab = Window:CreateTab("Starving Artists", "brush")
+
+ local Button = Tab:CreateButton({
+    Name = "Starving Artists",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/OllyHub/STARVINGART/refs/heads/main/STARART"))()
+    -- The function that takes place when the button is pressed
+    end,
+ })
+
+ Rayfield:Notify({
+    Title = "Join the discord",
+    Content = "Notification Content",
+    Duration = 6.5,
+    Image = "",
+ })
+
+
+ -- TABS 2
+ local Tab = Window:CreateTab("Remote Spy", "venetian-mask")
+
+ local Button = Tab:CreateButton({
+    Name = "Remote Spy",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/OllyHub/LT2HUB25/refs/heads/main/LT2HUB255"))()
+    -- The function that takes place when the button is pressed
+    end,
+ })
+
+
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/OllyHub/WINDOWEDHUBV1.2/refs/heads/main/obfuscated_WindowedHUBV1.2.txt"))()
