@@ -1,6 +1,7 @@
 print("Loading WindowedHUB by OLLY.EXE")
 
---12/02/25
+--13/02/25
+--Time: 12:18 AM UPDATED
 
 -- BOOTING LIBARY
 
@@ -140,6 +141,21 @@ local Toggle = Tab:CreateToggle({
   })
   local Paragraph = Tab:CreateParagraph({Title = "All Working now Updated as 13/02/25", Content = "Check for updates here: https://discord.gg/qHjwaAmSMA"}) --UPDATED DATE IN THIS LINE (((((((((((((((((((((())))))))))))))))))))))
   print("Loading WindowedHUB by OLLY.EXE")
+
+ -- TABS 2
+ local Tab = Window:CreateTab("Fisch", "fish-symbol")
+
+ local Button = Tab:CreateButton({
+    Name = "Fisch - Speed Hub X",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))()
+    -- The function that takes place when the button is pressed
+    end,
+ })
+
+
+
+
 
  -- TABS 2
  local Tab = Window:CreateTab("Universal Car Tuning", "car-front")
